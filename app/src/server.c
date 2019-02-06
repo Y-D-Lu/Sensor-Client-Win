@@ -13,27 +13,6 @@
 
 #define SOCKET_NAME "scrcpy"
 
-#ifdef OVERRIDE_SERVER_PATH
-# define DEFAULT_SERVER_PATH OVERRIDE_SERVER_PATH
-#else
-# define DEFAULT_SERVER_PATH PREFIX PREFIXED_SERVER_PATH
-#endif
-
-#define DEVICE_SERVER_PATH "/data/local/tmp/scrcpy-server.jar"
-
-static const char *get_server_path(void) {
-    const char *server_path = getenv("SCRCPY_SERVER_PATH");
-    if (!server_path) {
-        server_path = DEFAULT_SERVER_PATH;
-    }
-    return server_path;
-}
-
-static SDL_bool push_server(const char *serial) {
-    process_t process = adb_push(serial, get_server_path(), DEVICE_SERVER_PATH);
-    return process_check_success(process, "adb push");
-}
-
 static SDL_bool enable_tunnel_reverse(const char *serial, Uint16 local_port) {
     process_t process = adb_reverse(serial, SOCKET_NAME, local_port);
     return process_check_success(process, "adb reverse");
@@ -156,12 +135,6 @@ SDL_bool server_start(struct server *server, const char *serial,
             return SDL_FALSE;
         }
     }
-
-    /* Cause we use an apk, no need to push jar.
-    if (!push_server(serial)) {
-        SDL_free((void *) server->serial);
-        return SDL_FALSE;
-    }*/
 
     if (!enable_tunnel(server)) {
         SDL_free((void *) server->serial);
