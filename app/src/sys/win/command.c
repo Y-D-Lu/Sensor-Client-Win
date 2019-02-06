@@ -34,6 +34,7 @@ enum process_result cmd_execute(const char *path, const char *const argv[], HAND
 #else
     int flags = 0;
 #endif
+    LOGI("cmd path : %s , code: %s", path, cmd);
     if (!CreateProcess(NULL, cmd, NULL, NULL, FALSE, flags, NULL, NULL, &si, &pi)) {
         *handle = NULL;
         if (GetLastError() == ERROR_FILE_NOT_FOUND) {
