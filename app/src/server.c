@@ -81,10 +81,10 @@ static process_t execute_server(const char *serial,
     sprintf(bit_rate_string, "%"PRIu32, bit_rate);
     const char *const cmd[] = {
         "shell",
-        "CLASSPATH=/data/local/tmp/scrcpy-server.jar",
+        "CLASSPATH=/system/framework/sos.jar",
         "app_process",
         "/", // unused
-        "com.genymobile.scrcpy.Server",
+        "cn.arsenals.sos.CastEntrance",
         max_size_string,
         bit_rate_string,
         tunnel_forward ? "true" : "false",
@@ -157,10 +157,11 @@ SDL_bool server_start(struct server *server, const char *serial,
         }
     }
 
+    /* Cause we use an apk, no need to push jar.
     if (!push_server(serial)) {
         SDL_free((void *) server->serial);
         return SDL_FALSE;
-    }
+    }*/
 
     if (!enable_tunnel(server)) {
         SDL_free((void *) server->serial);
