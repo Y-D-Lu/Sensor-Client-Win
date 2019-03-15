@@ -1,6 +1,6 @@
-#include <lock_util.h>
+#include "lock_util.h"
 #include <stdlib.h>
-#include <SDL2/SDL_mutex.h>
+#include <SDL_mutex.h>
 
 #include "log.h"
 

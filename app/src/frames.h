@@ -1,8 +1,8 @@
 #ifndef FRAMES_H
 #define FRAMES_H
 
-#include <SDL2/SDL_mutex.h>
-#include <SDL2/SDL_stdinc.h>
+#include <SDL_mutex.h>
+#include <SDL_stdinc.h>
 
 #include "config.h"
 #include "fps_counter.h"

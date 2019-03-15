@@ -1,11 +1,12 @@
 #ifndef NET_H
 #define NET_H
 
-#include <SDL2/SDL_platform.h>
-#include <SDL2/SDL_stdinc.h>
+#include <SDL_platform.h>
+#include <SDL_stdinc.h>
 
 #ifdef __WINDOWS__
-# include <winsock2.h>
+typedef long long ssize_t;
+#include <winsock2.h>
   #define SHUT_RD SD_RECEIVE
   #define SHUT_WR SD_SEND
   #define SHUT_RDWR SD_BOTH

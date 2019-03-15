@@ -1,9 +1,8 @@
 #include "scrcpy.h"
 
-#include <getopt.h>
-#include <unistd.h>
+#include "unistd.h"
 #include <libavformat/avformat.h>
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 #include "config.h"
 #include "log.h"
@@ -204,74 +203,7 @@ static SDL_bool parse_port(char *optarg, Uint16 *port) {
     return SDL_TRUE;
 }
 
-static SDL_bool parse_args(struct args *args, int argc, char *argv[]) {
-    static const struct option long_options[] = {
-        {"bit-rate",     required_argument, NULL, 'b'},
-        {"crop",         required_argument, NULL, 'c'},
-        {"fullscreen",   no_argument,       NULL, 'f'},
-        {"help",         no_argument,       NULL, 'h'},
-        {"max-size",     required_argument, NULL, 'm'},
-        {"port",         required_argument, NULL, 'p'},
-        {"record",       required_argument, NULL, 'r'},
-        {"serial",       required_argument, NULL, 's'},
-        {"show-touches", no_argument,       NULL, 't'},
-        {"version",      no_argument,       NULL, 'v'},
-        {NULL,           0,                 NULL, 0  },
-    };
-    int c;
-    while ((c = getopt_long(argc, argv, "b:c:fhm:p:r:s:tv", long_options, NULL)) != -1) {
-        switch (c) {
-            case 'b':
-                if (!parse_bit_rate(optarg, &args->bit_rate)) {
-                    return SDL_FALSE;
-                }
-                break;
-            case 'c':
-                args->crop = optarg;
-                break;
-            case 'f':
-                args->fullscreen = SDL_TRUE;
-                break;
-            case 'h':
-                args->help = SDL_TRUE;
-                break;
-            case 'm':
-                if (!parse_max_size(optarg, &args->max_size)) {
-                    return SDL_FALSE;
-                }
-                break;
-            case 'p':
-                if (!parse_port(optarg, &args->port)) {
-                    return SDL_FALSE;
-                }
-                break;
-            case 'r':
-                args->record_filename = optarg;
-                break;
-            case 's':
-                args->serial = optarg;
-                break;
-            case 't':
-                args->show_touches = SDL_TRUE;
-                break;
-            case 'v':
-                args->version = SDL_TRUE;
-                break;
-            default:
-                // getopt prints the error message on stderr
-                return SDL_FALSE;
-        }
-    }
-
-    int index = optind;
-    if (index < argc) {
-        LOGE("Unexpected additional argument: %s", argv[index]);
-        return SDL_FALSE;
-    }
-    return SDL_TRUE;
-}
-
-int main(int argc, char *argv[]) {
+int main() { // int argc, char *argv[]
 #ifdef __WINDOWS__
     // disable buffering, we want logs immediately
     // even line buffering (setvbuf() with mode _IOLBF) is not sufficient
@@ -289,14 +221,6 @@ int main(int argc, char *argv[]) {
         .max_size = DEFAULT_MAX_SIZE,
         .bit_rate = DEFAULT_BIT_RATE,
     };
-    if (!parse_args(&args, argc, argv)) {
-        return 1;
-    }
-
-    if (args.help) {
-        usage(argv[0]);
-        return 0;
-    }
 
     if (args.version) {
         print_version();

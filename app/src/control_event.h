@@ -1,11 +1,11 @@
 #ifndef CONTROLEVENT_H
 #define CONTROLEVENT_H
 
-#include <SDL2/SDL_mutex.h>
-#include <SDL2/SDL_stdinc.h>
+#include <SDL_mutex.h>
+#include <SDL_stdinc.h>
 
-#include "android/input.h"
-#include "android/keycodes.h"
+#include "input.h"
+#include "keycodes.h"
 #include "common.h"
 
 #define CONTROL_EVENT_QUEUE_SIZE 64

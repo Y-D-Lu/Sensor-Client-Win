@@ -1,7 +1,7 @@
 #ifndef SCRCPY_H
 #define SCRCPY_H
 
-#include <SDL2/SDL_stdinc.h>
+#include <SDL_stdinc.h>
 
 struct scrcpy_options {
     const char *serial;

@@ -52,7 +52,7 @@ SDL_Surface *read_xpm(char *xpm[]) {
     SDL_assert(chars == 1); // this implementation does not support more
 
     // init index
-    struct index index[colors];
+    struct index index[256]; // ori struct index index[colors];
     for (int i = 0; i < colors; ++i) {
         const char *line = xpm[1+i];
         index[i].c = line[0];

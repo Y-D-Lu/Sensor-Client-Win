@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="buffer_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="command.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="control_event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="controller.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="convert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="device.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="events.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="file_handler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fps_counter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="frames.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="input_manager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lock_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="net.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="recorder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="scrcpy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="screen.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="server.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="str_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tiny_xpm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unistd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="input.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="keycodes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="command.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="control_event.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="controller.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="convert.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="device.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="file_handler.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fps_counter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="frames.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="input_manager.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lock_util.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="net.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="recorder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="scrcpy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="screen.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="server.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="str_util.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tiny_xpm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

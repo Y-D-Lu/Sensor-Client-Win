@@ -2,7 +2,7 @@
 #define RECORDER_H
 
 #include <libavformat/avformat.h>
-#include <SDL2/SDL_stdinc.h>
+#include <SDL_stdinc.h>
 
 #include "common.h"
 

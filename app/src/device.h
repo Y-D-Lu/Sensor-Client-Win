@@ -1,7 +1,7 @@
 #ifndef DEVICE_H
 #define DEVICE_H
 
-#include <SDL2/SDL_stdinc.h>
+#include <SDL_stdinc.h>
 
 #include "common.h"
 #include "net.h"

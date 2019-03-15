@@ -1,6 +1,6 @@
 #include "control_event.h"
 
-#include <SDL2/SDL_stdinc.h>
+#include <SDL_stdinc.h>
 #include <string.h>
 
 #include "buffer_util.h"

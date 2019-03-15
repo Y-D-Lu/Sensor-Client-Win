@@ -1,7 +1,7 @@
 #ifndef COMMON_H
 #define COMMON_H
 
-#include <SDL2/SDL_stdinc.h>
+#include <SDL_stdinc.h>
 
 #define ARRAY_LEN(a) (sizeof(a) / sizeof(a[0]))
 #define MIN(X,Y) (X) < (Y) ? (X) : (Y)

@@ -1,7 +1,7 @@
 #include "file_handler.h"
 
 #include <string.h>
-#include <SDL2/SDL_assert.h>
+#include <SDL_assert.h>
 #include "config.h"
 #include "command.h"
 #include "device.h"

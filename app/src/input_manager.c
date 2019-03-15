@@ -1,6 +1,6 @@
 #include "input_manager.h"
 
-#include <SDL2/SDL_assert.h>
+#include <SDL_assert.h>
 #include "convert.h"
 #include "lock_util.h"
 #include "log.h"

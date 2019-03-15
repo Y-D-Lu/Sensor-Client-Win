@@ -3,9 +3,9 @@
 
 #include "control_event.h"
 
-#include <SDL2/SDL_mutex.h>
-#include <SDL2/SDL_stdinc.h>
-#include <SDL2/SDL_thread.h>
+#include <SDL_mutex.h>
+#include <SDL_stdinc.h>
+#include <SDL_thread.h>
 
 #include "net.h"
 

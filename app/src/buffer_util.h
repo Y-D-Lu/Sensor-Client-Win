@@ -1,7 +1,7 @@
 #ifndef BUFFER_UTIL_H
 #define BUFFER_UTIL_H
 
-#include <SDL2/SDL_stdinc.h>
+#include <SDL_stdinc.h>
 
 static inline void buffer_write16be(Uint8 *buf, Uint16 value) {
     buf[0] = value >> 8;

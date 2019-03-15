@@ -1,7 +1,7 @@
 #ifndef SCREEN_H
 #define SCREEN_H
 
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include <libavformat/avformat.h>
 
 #include "common.h"

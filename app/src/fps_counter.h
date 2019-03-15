@@ -1,7 +1,7 @@
 #ifndef FPSCOUNTER_H
 #define FPSCOUNTER_H
 
-#include <SDL2/SDL_stdinc.h>
+#include <SDL_stdinc.h>
 
 #include "config.h"
 

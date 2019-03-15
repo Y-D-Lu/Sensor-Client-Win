@@ -2,11 +2,11 @@
 
 #include <libavformat/avformat.h>
 #include <libavutil/time.h>
-#include <SDL2/SDL_assert.h>
-#include <SDL2/SDL_events.h>
-#include <SDL2/SDL_mutex.h>
-#include <SDL2/SDL_thread.h>
-#include <unistd.h>
+#include <SDL_assert.h>
+#include <SDL_events.h>
+#include <SDL_mutex.h>
+#include <SDL_thread.h>
+#include "unistd.h"
 
 #include "config.h"
 #include "buffer_util.h"
@@ -20,6 +20,8 @@
 
 #define HEADER_SIZE 12
 #define NO_PTS UINT64_C(-1)
+
+typedef long long ssize_t;
 
 static struct frame_meta *frame_meta_new(uint64_t pts) {
     struct frame_meta *meta = malloc(sizeof(*meta));

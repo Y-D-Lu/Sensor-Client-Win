@@ -2,10 +2,10 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <unistd.h>
+#include "unistd.h"
 #include <libavformat/avformat.h>
-#include <sys/time.h>
-#include <SDL2/SDL.h>
+#include <time.h>
+#include <SDL.h>
 
 #include "command.h"
 #include "common.h"

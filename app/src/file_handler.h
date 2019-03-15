@@ -1,9 +1,9 @@
 #ifndef FILE_HANDLER_H
 #define FILE_HANDLER_H
 
-#include <SDL2/SDL_mutex.h>
-#include <SDL2/SDL_stdinc.h>
-#include <SDL2/SDL_thread.h>
+#include <SDL_mutex.h>
+#include <SDL_stdinc.h>
+#include <SDL_thread.h>
 #include "command.h"
 
 #define REQUEST_QUEUE_SIZE 16

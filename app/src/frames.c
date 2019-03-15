@@ -1,7 +1,7 @@
 #include "frames.h"
 
-#include <SDL2/SDL_assert.h>
-#include <SDL2/SDL_mutex.h>
+#include <SDL_assert.h>
+#include <SDL_mutex.h>
 #include <libavutil/avutil.h>
 #include <libavformat/avformat.h>
 

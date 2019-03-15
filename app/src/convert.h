@@ -1,8 +1,8 @@
 #ifndef CONVERT_H
 #define CONVERT_H
 
-#include <SDL2/SDL_stdinc.h>
-#include <SDL2/SDL_events.h>
+#include <SDL_stdinc.h>
+#include <SDL_events.h>
 #include "control_event.h"
 
 struct complete_mouse_motion_event {

@@ -1,3 +1,4 @@
+#pragma comment(lib, "Ws2_32.lib")
 #include "net.h"
 
 #include <stdio.h>
@@ -6,6 +7,7 @@
 
 #ifdef __WINDOWS__
   typedef int socklen_t;
+  typedef long long ssize_t;
 #else
 # include <sys/types.h>
 # include <sys/socket.h>
@@ -101,4 +103,22 @@ ssize_t net_send_all(socket_t socket, const void *buf, size_t len) {
 
 SDL_bool net_shutdown(socket_t socket, int how) {
     return !shutdown(socket, how);
+}
+
+SDL_bool net_init(void) {
+	WSADATA wsa;
+	int res = WSAStartup(MAKEWORD(2, 2), &wsa) < 0;
+	if (res < 0) {
+		LOGC("WSAStartup failed with error %d", res);
+		return SDL_FALSE;
+	}
+	return SDL_TRUE;
+}
+
+void net_cleanup(void) {
+	WSACleanup();
+}
+
+SDL_bool net_close(socket_t socket) {
+	return !closesocket(socket);
 }

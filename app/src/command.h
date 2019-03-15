@@ -2,8 +2,8 @@
 #define COMMAND_H
 
 #include <inttypes.h>
-#include <SDL2/SDL_stdinc.h>
-#include <SDL2/SDL_platform.h>
+#include <SDL_stdinc.h>
+#include <SDL_platform.h>
 
 // <https://stackoverflow.com/a/44383330/1987178>
 #ifdef _WIN32
