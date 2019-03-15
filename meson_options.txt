@@ -1,5 +1,0 @@
-option('build_app', type: 'boolean', value: true, description: 'Build the client')
-option('crossbuild_windows', type: 'boolean', value: false, description: 'Build for Windows from Linux')
-option('windows_noconsole', type: 'boolean', value: false, description: 'Disable console on Windows (pass -mwindows flag)')
-option('skip_frames', type: 'boolean', value: true, description: 'Always display the most recent frame')
-option('hidpi_support', type: 'boolean', value: true, description: 'Enable High DPI support')
