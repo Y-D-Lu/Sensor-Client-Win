@@ -15,6 +15,7 @@ struct args {
     SDL_bool help;
     SDL_bool version;
     SDL_bool show_touches;
+    Uint32 address;
     Uint16 port;
     Uint16 max_size;
     Uint32 bit_rate;
@@ -217,6 +218,7 @@ int main() { // int argc, char *argv[]
         .help = SDL_FALSE,
         .version = SDL_FALSE,
         .show_touches = SDL_FALSE,
+        .address = DEFAULT_IP_ADDRESS,
         .port = DEFAULT_LOCAL_PORT,
         .max_size = DEFAULT_MAX_SIZE,
         .bit_rate = DEFAULT_BIT_RATE,
@@ -239,9 +241,10 @@ int main() { // int argc, char *argv[]
     SDL_LogSetAllPriority(SDL_LOG_PRIORITY_DEBUG);
 #endif
 
-    struct scrcpy_options options = {
+	struct scrcpy_options options = {
         .serial = args.serial,
-        .crop = args.crop,
+		.crop = args.crop,
+		.address = args.address,
         .port = args.port,
         .record_filename = args.record_filename,
         .max_size = args.max_size,

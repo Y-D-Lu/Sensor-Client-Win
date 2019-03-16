@@ -141,7 +141,7 @@ static void wait_show_touches(process_t process) {
 
 SDL_bool scrcpy(const struct scrcpy_options *options) {
     SDL_bool send_frame_meta = !!options->record_filename;
-    if (!server_start(&server, options->serial, options->port,
+    if (!server_start(&server, options->serial, options->address, options->port,
                       options->max_size, options->bit_rate, options->crop,
                       send_frame_meta)) {
         return SDL_FALSE;

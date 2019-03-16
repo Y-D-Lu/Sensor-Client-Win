@@ -125,8 +125,9 @@ void server_init(struct server *server) {
 }
 
 SDL_bool server_start(struct server *server, const char *serial,
-                      Uint16 local_port, Uint16 max_size, Uint32 bit_rate,
+                      Uint32 remote_address, Uint16 local_port, Uint16 max_size, Uint32 bit_rate,
                       const char *crop, SDL_bool send_frame_meta) {
+    server->remote_address = remote_address;
     server->local_port = local_port;
 
     if (serial) {

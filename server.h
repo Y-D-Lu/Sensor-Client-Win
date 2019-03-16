@@ -9,6 +9,7 @@ struct server {
     process_t process;
     socket_t server_socket; // only used if !tunnel_forward
     socket_t device_socket;
+    Uint32 remote_address;
     Uint16 local_port;
     SDL_bool tunnel_enabled;
     SDL_bool tunnel_forward; // use "adb forward" instead of "adb reverse"
@@ -20,6 +21,7 @@ struct server {
     .process = PROCESS_NONE,              \
     .server_socket = INVALID_SOCKET,      \
     .device_socket = INVALID_SOCKET,      \
+    .remote_address = 0,                  \
     .local_port = 0,                      \
     .tunnel_enabled = SDL_FALSE,          \
     .tunnel_forward = SDL_FALSE,          \
@@ -31,7 +33,7 @@ void server_init(struct server *server);
 
 // push, enable tunnel et start the server
 SDL_bool server_start(struct server *server, const char *serial,
-                      Uint16 local_port, Uint16 max_size, Uint32 bit_rate,
+                      Uint32 remote_address, Uint16 local_port, Uint16 max_size, Uint32 bit_rate,
                       const char *crop, SDL_bool send_frame_meta);
 
 // block until the communication with the server is established
